@@ -109,28 +109,3 @@ public:
 
 
 
-class Solution {
-public:
-int findMaximumXOR(vector<int>& nums) {
-
-int n = nums.size();
-
-
-Trie*n1 = new Trie();
-
-for (int i = 0; i <n; i++)
-{
-  n1->insert(nums[i]);
-}
-
-
-int maxi = 0;
-for (int i = 0; i <n; i++)
-{
-    maxi = max(maxi,n1->maximumxor(nums[i]));
-}
-
-return maxi;
-
-}
-};
